@@ -4,8 +4,8 @@ services:
     build:
       context: ./djangomysql
       dockerfile: Dockerfile
-    entrypoint: ["./wait.sh"]
-    depends-on: #links:
+    entrypoint: ["sh","/wait.sh"]
+    depends_on: #links:
       - db
     ports:
       - "8000:8000"
